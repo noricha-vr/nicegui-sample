@@ -1,51 +1,73 @@
-# NiceGUI Chat with OpenAI Agent SDK
+# NiceGUI Sample with AI Chat
 
-NiceGUIを使用したチャットアプリケーションです。OpenAI Agent SDKを統合して、インターネット検索機能などを備えたAIチャットを実現しています。
+A sample application demonstrating NiceGUI capabilities with OpenAI Agent integration.
 
-## 機能
+Repository: https://github.com/noricha-vr/nicegui-sample
 
-- カウンターページ: シンプルなカウンター機能
-- AIチャットページ: OpenAI Agent SDKを使用した高度なチャット機能
-  - インターネット検索機能
-  - 自然な会話体験
+## Features
 
-## セットアップ
+- **Counter Page** - Simple interactive counter demonstration
+- **AI Chat Assistant** - Chat interface powered by OpenAI with web search capabilities
+- **Responsive UI** - Clean interface built with NiceGUI
 
-1. 必要なパッケージをインストール:
+## Prerequisites
 
-```bash
-uv pip install -e .
-```
+- Python 3.9+
+- Docker and Docker Compose (for containerized deployment)
+- OpenAI API key
 
-2. 環境変数を設定:
+## Setup
 
-`.env.example`ファイルをコピーして`.env`を作成し、APIキーを設定:
+### Local Development
 
-```bash
-cp .env.example .env
-```
+1. Clone the repository:
+   ```
+   git clone https://github.com/noricha-vr/nicegui-sample.git
+   cd nicegui-sample
+   ```
 
-`.env`ファイルを編集してAPIキーを設定:
-```
-OPENAI_API_KEY=your_openai_api_key_here
-TAVILY_API_KEY=your_tavily_api_key_here  # オプション
-```
+2. Create a virtual environment:
+   ```
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
 
-## 実行方法
+3. Install dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
 
-```bash
-python run.py
-```
+4. Create `.env` file with your OpenAI API key:
+   ```
+   OPENAI_API_KEY=your-api-key-here
+   ```
 
-または:
+5. Run the application:
+   ```
+   python main.py
+   ```
 
-```bash
-python -m src.main
-```
+## Usage
 
-ブラウザで http://localhost:8081 にアクセスしてアプリケーションを使用できます。
+1. Open your browser and navigate to http://localhost:8081
+2. The application will open on the Counter page
+3. Use the navigation links to switch between Counter and Chat pages
+4. On the Chat page, you can interact with the AI assistant which has web search capabilities
 
-## 注意事項
+## Project Structure
 
-- OpenAI APIキーが必要です
-- インターネット検索機能を使用する場合はTavily APIキーも必要です
+- `main.py` - Application entry point and configuration
+- `countup.py` - Counter page implementation
+- `chat.py` - AI chat assistant implementation
+- `agents.py` - Agent SDK implementation (not shown in the code samples)
+
+## Development Environment
+
+- M1 Mac
+- Docker Compose
+
+## License
+
+Copyright (c) 2025 noricha-vr
+
+This project is licensed under the MIT License. See the LICENSE file for details.
