@@ -6,4 +6,7 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "nicegui>=2.13.0",
+    "openai-agents>=1.0.0",  # OpenAI Agent SDK
+    "python-dotenv>=1.0.0",  # 環境変数管理
+    "nest-asyncio>=1.5.6",   # asyncioループのネスト対応
 ]
